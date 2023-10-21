@@ -2,4 +2,4 @@
 
 ## 설명
 
-TodoList를 만들어 보자
+TodoList를 만들어 보자. 
