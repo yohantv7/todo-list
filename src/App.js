@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
+
+
 function App() {
+  const [todos, setTodos] = useState(["할일 1", "할일 2"]);
+  //["할일 1", "할일 2"];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>TODO LIST</h1>
+      <div>
+        <input />
+        <button>ADD</button>
+      </div>
+      {todos.map((todo, index) => (
+        <div key={index}>
+          <input type="checkbox" />
+          <span>{todo}</span>
+          <button>DEL</button>
+        </div>
+      ))}
     </div>
   );
 }
